@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+
+    <div class="container">
+    <!-- Timeblocks -->
+
+      <div class="row time-block" id="8AM">
+        <div class="col-md-1 hour">
+          8AM
+        </div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="col-md-1 saveBtn"><i class="fas fa-cloud-download-alt"></i></button>
+      </div>
+
+      <div class="row time-block" id="9AM">
+        <div class="col-md-1 hour">
+          9AM
+        </div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="col-md-1 saveBtn" id="save"><i class="fas fa-cloud-download-alt"></i></button>
+      </div>
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+<!-- 
+  Make grid using bootstrap (2 time blocks done to start out, repeat after knowing that code works)
+  Start with just 2 rows to make sure script works ()
+  
+  Use moment.js to display current date at the top of the screen
+    using jquery, add dynamic html text in p with id of currentDay
+
+  functionality for adding tasks to the schedule:
+    -utlize the textarea element to write text
+    -when you click the save button, add the sibling textarea to local storage.
+      -save the object/array with attributes of time (id), task (textarea value)
+      -overwrite the localStorage object with the same id if it is changed.
+      -at the beginning of the code needs to be a get item from local storage function so they populate when the page loads. If no localStorage, then an empty array loads
+
+  use moment.js to get the time.
+    -each row id should reflect the value of the hour of time it's associated with.
+    -add/remove the css classes for past, present, and future based on the time each row reflects compared the time we're in. 
+
+  questions:
+    -do I need to use 24hr time in moment.js?
+    -  
+-->
