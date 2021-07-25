@@ -1,8 +1,8 @@
 // Sets the current day at the top of the page
 var currentDay = moment().format("LL");
 $("#currentDay").html(currentDay);
-// Define functions to load time and set time colors
 
+// Define functions to load textarea content from localStorage
 var loadTask = function() {
     // get tasks from local storage (runs for each line)
     $("#task-hour8").val(localStorage.getItem("8"));
@@ -62,6 +62,8 @@ $(document).ready(function() {
         })
     };
 
+    // call the function to set the block colors
     identifyTime();
+    // call the function to load the textarea blocks from localStorage
     loadTask();
 });

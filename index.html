@@ -26,7 +26,9 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- display date using moment.js-->
       <p id="currentDay" class="lead"></p>
+      <!-- briefly displays a message that the task has been saved-->
       <h5 id="save-message"></h5>
     </header>
 
@@ -119,28 +121,3 @@
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
-
-
-
-<!-- 
-  Make grid using bootstrap (2 time blocks done to start out, repeat after knowing that code works)
-  Start with just 2 rows to make sure script works ()
-  
-  Use moment.js to display current date at the top of the screen
-    using jquery, add dynamic html text in p with id of currentDay
-
-  functionality for adding tasks to the schedule:
-    -utlize the textarea element to write text
-    -when you click the save button, add the sibling textarea to local storage.
-      -save the object/array with attributes of time (id), task (textarea value)
-      -overwrite the localStorage object with the same id if it is changed.
-      -at the beginning of the code needs to be a get item from local storage function so they populate when the page loads. If no localStorage, then an empty array loads
-
-  use moment.js to get the time.
-    -each row id should reflect the value of the hour of time it's associated with.
-    -add/remove the css classes for past, present, and future based on the time each row reflects compared the time we're in. 
-
-  questions:
-    -do I need to use 24hr time in moment.js?
-    -  
--->
