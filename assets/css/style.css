@@ -21,6 +21,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+.jumbotron h5 {
+  color: #0093c0;
+  font-style: italic;
+}
+
 .description{
   white-space: pre-wrap;
 }
@@ -40,6 +45,7 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding: 0 5px;
 }
 
 .past {
@@ -49,12 +55,13 @@ textarea{
 
 .present {
   background-color: #ff9b61;
-  color: white;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
 }
 
 .future {
   background-color: #77d1dd;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .saveBtn {
